@@ -3,12 +3,12 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const port = process.env.PORT || 5000;
-const public = path.resolve("./public");
+const staticdir = process.env.DEV ? "./client/public":"./client/build"
 
-app.use(express.static("./client/public"));
+app.use(express.static(path.resolve(staticdir)));
 //Starts the Home page
-app.get("/", (req, res) => {
-  res.sendFile(public + "/index.html");
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve("./client/build/index.html"));
 });
 
 //Allowing the addition port 5000 or original 3000
