@@ -1,3 +1,4 @@
+// Imports
 import logo from './logo.svg';
 import './App.css';
 import Home from "./components/Home";
@@ -10,10 +11,12 @@ import {Route, Switch, Link} from "react-router-dom";
 
 function App() {
   return (
+    // Main Title
     <div id="Full">
       <header id = "main-title">Portfolio</header>
       <div id="nav-bar">
-  <Link to="/Home" className="nav-link">
+        {/* links to every page */}
+  <Link to="/" className="nav-link">
     Home
   </Link>
   <Link to="/About" className="nav-link">
@@ -25,10 +28,11 @@ function App() {
   <Link to="/Resume" className="nav-link">
     Resume
   </Link>
-  <Link to="/Contacts" className="nav-link">
+  <Link to="/ContactForm" className="nav-link">
     Contact Info
   </Link>
   </div>
+  {/* giving the url routes to each page */}
       <Switch>
         <Route exact path = "/" component = {Home}/>
         <Route path = "/About" component = {About}/>
@@ -36,7 +40,7 @@ function App() {
         <Route path = "/Resume" component = {Resume} />
         <Route path = "/ContactForm" component = {ContactForm}/>
       </Switch>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }
