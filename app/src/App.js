@@ -1,11 +1,9 @@
 // Imports
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./components/Home";
 import About from "./components/About";
 import MyProjects from "./components/MyProjects";
 import Resume from "./components/Resume";
-import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
 import { Route, Switch, Link } from "react-router-dom";
 
