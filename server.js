@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const port = process.env.PORT || 5000;
-const staticdir = process.env.DEV ? "./app/public":"./app/build"
+const staticdir = process.env.DEV ? "./app/public" : "./app/build";
 
 app.use(express.static(path.resolve(staticdir)));
 //Starts the Home page

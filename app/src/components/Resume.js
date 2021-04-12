@@ -7,7 +7,7 @@ function Resume(props) {
     <div id="resumepage">
       <header> Resume </header>
       {/* //this image is my resume */}
-      <img id="ResumeImg" src = {ResumeImg} />
+      <img id="ResumeImg" src={ResumeImg} />
     </div>
   );
 }
